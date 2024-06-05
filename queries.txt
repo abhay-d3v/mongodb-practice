@@ -44,3 +44,9 @@ db.users.insertMany([
         "age": 22
     }
 ])
+
+// find age more than 20
+db.users.find({age: {$gt: 20}}).pretty()
+
+// update command for overwriting the document
+db.users.update({"_id": "XXX"}, {"age": 20})
