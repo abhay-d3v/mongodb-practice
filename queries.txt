@@ -50,3 +50,10 @@ db.users.find({age: {$gt: 20}}).pretty()
 
 // update command for overwriting the document
 db.users.update({"_id": "XXX"}, {"age": 20})
+
+// add arrays
+db.users.updateOne({"_id": "XXX"}, {
+    $set: {
+        "marks": [90, 89, 92]
+    }
+})
