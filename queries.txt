@@ -12,3 +12,14 @@ db.users.insertOne({
 
 // get all the data inside particular database and prettify it
 db.users.find().pretty()
+
+// delete a document
+db.users.deleteOne({"_id": "XXX"})
+
+// update a document
+db.users.updateOne({"_id": "XXX"}, {
+    $set: {
+        "age": 21
+    }
+})
+
