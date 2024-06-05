@@ -1,0 +1,14 @@
+// show databases
+show dbs
+
+// choose your db
+use users
+
+// insert command
+db.users.insertOne({
+    "name": "abhay",
+    "age": 20
+})
+
+// get all the data inside particular database and prettify it
+db.users.find().pretty()
