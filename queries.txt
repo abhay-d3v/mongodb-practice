@@ -23,3 +23,24 @@ db.users.updateOne({"_id": "XXX"}, {
     }
 })
 
+// update many documents
+db.users.updateMany({"name": "abhay"}, {
+    $set: {
+        "age": 20
+    }
+})
+
+// delete many documents
+db.users.deleteMany({"name": "abhay"})
+
+// insert many documents
+db.users.insertMany([
+    {
+        "name": "chiru",
+        "age": 28
+    },
+    {
+        "name": "akansha",
+        "age": 22
+    }
+])
